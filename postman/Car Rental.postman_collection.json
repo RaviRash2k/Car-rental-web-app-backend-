@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "4f940592-d76f-4c43-8d70-ae032cedf27b",
+		"name": "Car Rental",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31394907"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "addCar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkB0ZXN0LmNvbSIsImlhdCI6MTczMzgwNjMwNiwiZXhwIjoxNzMzODQyMzA2fQ.DMhpeSYPn-yq01EUZZJoTxO4nyVUDn3z3G-vDWvU3wg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"brand\": \"Geely\",\r\n    \"name\": \"panda\",\r\n    \"type\": \"car\",\r\n    \"color\": \"white\",\r\n    \"transmission\": \"panada\",\r\n    \"description\": \"hello car\",\r\n    \"price\": \"2345678\",\r\n    \"year\": \"2002.11.18\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{carRent}}admin/car",
+							"host": [
+								"{{carRent}}admin"
+							],
+							"path": [
+								"car"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all cars",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkB0ZXN0LmNvbSIsImlhdCI6MTczMzgwNjMwNiwiZXhwIjoxNzMzODQyMzA2fQ.DMhpeSYPn-yq01EUZZJoTxO4nyVUDn3z3G-vDWvU3wg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{carRent}}admin/cars",
+							"host": [
+								"{{carRent}}admin"
+							],
+							"path": [
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Car",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkB0ZXN0LmNvbSIsImlhdCI6MTczMzgwNjMwNiwiZXhwIjoxNzMzODQyMzA2fQ.DMhpeSYPn-yq01EUZZJoTxO4nyVUDn3z3G-vDWvU3wg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{carRent}}admin/car/2",
+							"host": [
+								"{{carRent}}admin"
+							],
+							"path": [
+								"car",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get car by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkB0ZXN0LmNvbSIsImlhdCI6MTczMzgwNjMwNiwiZXhwIjoxNzMzODQyMzA2fQ.DMhpeSYPn-yq01EUZZJoTxO4nyVUDn3z3G-vDWvU3wg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{carRent}}admin/car/4",
+							"host": [
+								"{{carRent}}admin"
+							],
+							"path": [
+								"car",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get bookings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkB0ZXN0LmNvbSIsImlhdCI6MTczNDI0MTUzNywiZXhwIjoxNzM0Mjc3NTM3fQ.GwR6Wn5xd0N8PkqkUyOWj55wagPXYQuxcfSAe0LBnGs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{carRent}}admin/car/bookings",
+							"host": [
+								"{{carRent}}admin"
+							],
+							"path": [
+								"car",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change booking status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkB0ZXN0LmNvbSIsImlhdCI6MTczNDI1MDA1MywiZXhwIjoxNzM0Mjg2MDUzfQ.Xa69_cDT4K0PsCD3V3gPsphrKnPsf7D2TIGBaDFpRxQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{carRent}}admin/car/booking/1/approve",
+							"host": [
+								"{{carRent}}admin"
+							],
+							"path": [
+								"car",
+								"booking",
+								"1",
+								"approve"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "get all cars",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXZpbmR1QGV4YW1wbGUuY29tIiwiaWF0IjoxNzM0MjQwNzYwLCJleHAiOjE3MzQyNzY3NjB9.XwyMw_Yk2SBO8ZlH9iSeYGDxHchToeRGr1r-5F71xoM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{carRent}}customer/getAllCars",
+							"host": [
+								"{{carRent}}customer"
+							],
+							"path": [
+								"getAllCars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "book car",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXZpbmR1QGV4YW1wbGUuY29tIiwiaWF0IjoxNzMzOTQxNTQzLCJleHAiOjE3MzM5Nzc1NDN9.rn7_TkbEiJM9s6mVSdjOEnpeUSQYwa1M8xQtaczMpEY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fromDate\": \"2024-12-15T10:00:00\",\r\n  \"toDate\": \"2024-12-20T10:00:00\",\r\n  \"days\": 5,\r\n  \"price\": 25000,\r\n  \"userId\": 1,\r\n  \"carId\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{carRent}}car/book",
+							"host": [
+								"{{carRent}}car"
+							],
+							"path": [
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get car by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXZpbmR1QGV4YW1wbGUuY29tIiwiaWF0IjoxNzM0MjQwNzYwLCJleHAiOjE3MzQyNzY3NjB9.XwyMw_Yk2SBO8ZlH9iSeYGDxHchToeRGr1r-5F71xoM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{carRent}}customer/car/1",
+							"host": [
+								"{{carRent}}customer"
+							],
+							"path": [
+								"car",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get booking by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXZpbmR1QGV4YW1wbGUuY29tIiwiaWF0IjoxNzM0MjQwNzYwLCJleHAiOjE3MzQyNzY3NjB9.XwyMw_Yk2SBO8ZlH9iSeYGDxHchToeRGr1r-5F71xoM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{carRent}}customer/car/booking/1",
+							"host": [
+								"{{carRent}}customer"
+							],
+							"path": [
+								"car",
+								"booking",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Rashmiitha\",\r\n    \"email\": \"rashmiitha@example.com\",\r\n    \"password\": \"1234\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{carRent}}auth/signup",
+					"host": [
+						"{{carRent}}auth"
+					],
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ravindu@example.com\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{carRent}}auth/login",
+					"host": [
+						"{{carRent}}auth"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@test.com\",\r\n    \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{carRent}}auth/login",
+					"host": [
+						"{{carRent}}auth"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "carRent",
+			"value": "http://localhost:8080/api/"
+		}
+	]
+}
